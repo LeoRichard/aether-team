@@ -72,7 +72,7 @@
       s_id = 0;
       //console.log(index,slide,s_id);
       $(".slick-slide:not(.slick-cloned)",slide).each(function(s_index,s_slide) {
-        $(this).attr("data-slick-index",s_id)
+        $(this).attr("data-slick-index",s_id);
         s_id = s_id+1;
         if (index==0) {
           if ($(this).hasClass("slick-current")) {
@@ -86,8 +86,8 @@
             $(this).removeClass("slick-current");
           }
         }
-      })
-    })
+      });
+    });
     $slider.slick('slickGoTo',0,true);
 	});
 
