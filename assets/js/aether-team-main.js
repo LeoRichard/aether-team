@@ -5,7 +5,7 @@
 
 (function ($) {
 
-	console.log('Aether team plugin is running...');
+	//console.log('Aether team plugin is running...');
 
 	$('.aether-slick').slick({
 	  dots: false,
@@ -16,7 +16,7 @@
 	  slidesToScroll: 1,
 	  focusOnSelect: true,
 	  prevArrow:"<button type='button' class='slick-prev pull-left'><i class='fa fa-chevron-left' aria-hidden='true'></i></button>",
-      nextArrow:"<button type='button' class='slick-next pull-right'><i class='fa fa-chevron-right' aria-hidden='true'></i></button>",
+    nextArrow:"<button type='button' class='slick-next pull-right'><i class='fa fa-chevron-right' aria-hidden='true'></i></button>",
 	  asNavFor: '.aether-slick-content',
 	  responsive: [
 	    {
@@ -57,39 +57,39 @@
 	});
 
 	// Init with first filter
-	//$('.aether-slick').slick('slickFilter', ".aether-team-member[data-category=directores]");
 	$(document).ready(function() {
 	  $('.aether-team-filter[data-filter=directores]').click();
 	});
 
 	$(document).on('click', '.aether-team-filter', function(a){
-	        $(".aether-team-category-filters span.active").removeClass("active");
-	        $(this).addClass("active");
-	        filterValue = $(this).attr("data-filter");
-	        var $slider = $('.aether-slick, .aether-slick-content');
-	        $slider.slick('slickUnfilter').slick('slickFilter', ".aether-team-filter-value[data-category="+ filterValue +"]");
-	        $slider.each(function(index,slide){
-	            s_id = 0;
-	            //console.log(index,slide,s_id);
-	            $(".slick-slide:not(.slick-cloned)",slide).each(function(s_index,s_slide) {
-	                $(this).attr("data-slick-index",s_id)
-	                s_id = s_id+1;
-	                if (index==0) {
-	                    if ($(this).hasClass("slick-current")) {
-	                        active_index = s_id;
-	                    }
-	                }
-	                if (index==1) {
-	                    if (s_id==active_index) {
-	                        $(this).addClass("slick-current");
-	                    } else {
-	                        $(this).removeClass("slick-current");
-	                    }
-	                }
-	            })
-	        })
-	        $slider.slick('slickGoTo',0,true);
-	    });
+    $(".aether-team-category-filters span.active").removeClass("active");
+    $(this).addClass("active");
+    filterValue = $(this).attr("data-filter");
+    var $slider = $('.aether-slick, .aether-slick-content');
+    $slider.slick('slickUnfilter').slick('slickFilter', ".aether-team-filter-value[data-category="+ filterValue +"]");
+
+    $slider.each(function(index,slide){
+      s_id = 0;
+      //console.log(index,slide,s_id);
+      $(".slick-slide:not(.slick-cloned)",slide).each(function(s_index,s_slide) {
+        $(this).attr("data-slick-index",s_id)
+        s_id = s_id+1;
+        if (index==0) {
+          if ($(this).hasClass("slick-current")) {
+              active_index = s_id;
+          }
+        }
+        if (index==1) {
+          if (s_id==active_index) {
+            $(this).addClass("slick-current");
+          } else {
+            $(this).removeClass("slick-current");
+          }
+        }
+      })
+    })
+    $slider.slick('slickGoTo',0,true);
+	});
 
 	$('.aether-team-see-more').on('click', function(e) {
 		$('p', this).text($('p', this).text() == 'Ver más' ? 'Ver menos' : 'Ver más');
@@ -98,10 +98,10 @@
 	});
 
 	$('.aether-team-scroll').click(function(e){
-	    var jump = $(this).attr('href');
-	    var new_position = $(jump).offset();
-	    $('html, body').stop().animate({ scrollTop: new_position.top }, 500);
-	    e.preventDefault();
+    var jump = $(this).attr('href');
+    var new_position = $(jump).offset();
+    $('html, body').stop().animate({ scrollTop: new_position.top }, 500);
+    e.preventDefault();
 	});
 
 })(jQuery);
