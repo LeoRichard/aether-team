@@ -1,0 +1,280 @@
+.aether-slick {
+    padding: 30px 0 0;
+}
+.aether-team-member {
+    background: #FFFFFF;
+    border-radius: 5px;
+    margin: 60px 3px 30px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+.aether-team-member:not(.slick-current) {
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4);
+}
+.aether-team-member.slick-current {
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+}
+.aether-team-member .aether-team-name {
+	font-family: "Montserrat", Helvetica, Arial, sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 20px;
+	color: #D1D1D1;
+	max-width: 109px;
+}
+.aether-team-member .aether-team-name {
+    margin: auto;
+}
+.aether-team-member .aether-team-position {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 14px;
+	color: #D1D1D1;
+	min-height: 40px;
+	display: flex;
+	align-items: center;
+	margin: 20px 15px;
+	justify-content: center;
+}
+
+.aether-team-member .aether-team-excerpt p {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 19px;
+	color: #B8BCBF;
+}
+
+.aether-team-member.slick-current .aether-team-name, 
+.aether-team-member.slick-current .aether-team-excerpt p,
+.aether-team-member.slick-current .aether-team-position {
+	color: #EE7E22;
+}
+
+.aether-team-member.slick-current hr {
+	border-color: #EE7E22 !important;
+}
+
+.aether-team-member .aether-team-image {
+    width: 100px;
+    height: 100px;
+    border: 3px solid #E0E0E0;
+    background-color: #fff;
+    margin: auto;
+    margin-top: -70px;
+    margin-bottom: 11px!important;
+    border-radius: 50%;
+}
+.aether-team-member.slick-current .aether-team-image {
+    border-color: #EE7E22;
+}
+.aether-team-name-content {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 20px;
+	color: #EE7E22;
+}
+.aether-team-position-content {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 20px;
+	color: #EE7E22;
+}
+.aether-team-info-content {
+	padding-top: 10px;
+}
+.aether-team-info-content p, .aether-team-content-hidden p {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 19px;
+	margin-bottom: 20px;
+}
+.aether-team-content-hidden {
+	display: none;
+}
+.aether-team-content-hidden p {
+	text-align: left;
+}
+
+.aether-team-content-hidden .aether-team-position-content {
+	margin-bottom: 20px;
+}
+
+.aether-team-content-hidden .aether-team-name {
+	padding: 0 10px;
+	max-width: 100%;
+}
+
+.aether-team-member .aether-team-image div {
+	height: 38px; 
+	width: 38px;
+	background-image: url(/wp-content/uploads/2019/06/Fill-4.png); 
+	background-position: center center; 
+	margin: 25px auto;
+}
+
+.aether-team-member.slick-current .aether-team-image div {
+	background-image: url(/wp-content/uploads/2019/06/Fill-3.png)!important; 
+
+}
+.aether-slick .slick-prev, .aether-slick .slick-next {
+	background: transparent !important;
+}
+.aether-slick .slick-prev {
+    left: -70px;
+}
+.aether-slick .slick-next {
+    right: -70px;
+}
+.aether-slick .slick-prev:before, .aether-slick .slick-next:before {
+	display: none;
+}
+
+.aether-slick .slick-prev, .aether-slick .slick-next, .aether-slick .slick-prev.slick-disabled {
+	opacity: 1 !important;
+}
+
+.aether-slick .fa {
+	font-size: 32px;
+	color: #9FA3A7;
+}
+
+.aether-team-category-filters span:last-child {
+    display: none;
+}
+
+.aether-team-category-filters {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.aether-team-category-filters .aether-team-filter {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 18px;
+	color: #5E5C5C;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.aether-team-filter-sep {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 18px;
+	color: #979797;
+}
+
+span.aether-team-filter.active {
+    text-decoration-line: underline;
+    color: #EE7E22;
+    font-weight: bold;
+}
+
+@media (max-width: 480px) {
+	.aether-team-member {
+		margin: 60px 30px 30px 30px;
+	}
+	.aether-slick .slick-prev {
+	    left: -20px;
+	}
+	.aether-slick .slick-next {
+	    right: -20px;
+	}
+	.aether-hr-sep, .aether-slick-content {
+		display: none !important;
+	}
+	.aether-team-see-more {
+		text-align: center;
+	}
+	.aether-team-see-more i, .aether-team-return-top i {
+		width: 38px;
+		height: 38px;
+	}
+	.aether-team-see-more p {
+		cursor: pointer;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 20px;
+		text-decoration-line: underline;
+		color: #EE7E22;
+		margin-top: 30px;
+	}
+	.aether-team-return-top {
+		text-align: center!important;
+	}
+	.aether-team-return-top a {
+		display: block;
+		cursor: pointer;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 20px;
+		color: #EE7E22;
+		margin-top: 30px;
+		text-align: center!important;
+		margin-top: 0;
+	}
+	.fa-chevron-up:before {
+		background: transparent;
+	}
+	.aether-team-filter-sep {
+    	display: none;
+	}
+	.aether-team-filter:nth-child(5) {
+	    width: 100% !important;
+	    text-align: center;
+	    padding: 10px 0;
+	    margin: 10px 0;
+	    border-top: 1px solid #B8BCBF;
+	    border-bottom: 1px solid #B8BCBF;
+	}
+	.aether-team-filter:nth-child(3), .aether-team-filter:nth-child(9) {
+	    text-align: right;
+	}
+
+	.aether-team-category-filters .aether-team-filter {
+	    width: 50%;
+	}
+	.aether-team-category-filters {
+	    padding: 0 30px;
+	}
+}
+@media (max-width: 1920px) {
+	.aether-slick, .aether-team-info-content, .aether-team-category-filters, .aether-hr-sep {
+		max-width: 775px!important;
+	}
+	.aether-team-info-content, .aether-team-category-filters, .aether-hr-sep {
+		margin: auto;
+	}
+}
+
+@media (max-width: 325px) {
+	.aether-team-category-filters .aether-team-filter {
+		font-size: 14px;
+	}
+}
+
+@media (min-width: 480px) {
+	.aether-team-see-more {
+		display: none;
+	}
+}
